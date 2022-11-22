@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Timezone</title>
+</head>
+<body>
+
+    <p th:text="${before.getCreatedAt()} + ' До смены часового пояса'">VALUE</p>
+    <p th:text="${after} + ' После смены часового пояса'">VALUE</p>
+
+    <form th:method="GET" th:action="@{/events}">
+        <input type="submit" value="All events"/>
+    </form>
+
+</body>
+</html>

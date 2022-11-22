@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+
+    <p th:text="${'ID события '+ event.getId()}">VALUE</p>
+    <p th:text="${'Дата создания: ' + event.getCreatedAt()}">VALUE</p>
+
+    <form th:method="DELETE" th:action="@{/events/{id}(id=${event.getId()})}">
+        <input type="submit" value="Delete"/>
+    </form>
+
+</body>
+</html>
